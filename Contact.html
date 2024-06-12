@@ -52,7 +52,7 @@
     id="sec-cae4">
     <div
       class="custom-expanded u-align-center u-container-style u-group u-hover-feature u-radius u-shape-round u-white u-group-1">
-      <div class="u-container-layout u-valign-middle-xs">
+      <div class="u-container-layout u-valign-middle-xs" id="sec-ca32">
         <a href="#" class="u-align-right u-enable-responsive u-image u-logo u-image-1">
           <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
         </a>
@@ -741,7 +741,26 @@
         margin-right: 105px;
       }
     }
+    .header {
+          transition: background-color 0.3s;
+      }
+      .scrolled {
+          background-color: #e3e3e3; /* اللون الجديد عند التمرير */
+      }
   </style>
+
+
+
+<script>
+  window.addEventListener('scroll', function() {
+      const header = document.getElementById('sec-ca32');
+      if (window.scrollY > 0) {
+          header.classList.add('scrolled');
+      } else {
+          header.classList.remove('scrolled');
+      }
+  });
+</script>
 </body>
 
 </html>
