@@ -17,6 +17,10 @@
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,500,600,700,800,900|Tajawal:200,300,400,500,700,800,900">
     <style>
+    .hidden {
+         display: none; 
+        }
+
     /* تطبيق الاتجاه RTL على النصوص */
     p,
     h1,
@@ -79,7 +83,7 @@
                                     href="pricing.html" style="padding: 10px 20px;">أسعارنا</a>
                             </li>
                             <li class="u-nav-item"><a
-                                    class="u-button-style u-dialog-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-base"
+                                    class="u-button-style u-dialog-link u-nav-link"
                                     href="#sec-d3bd" style="padding: 10px 20px;">الأدوات المهنية</a>
                             </li>
                             <li class="u-nav-item"><a
@@ -127,13 +131,13 @@
                 سير ذاتية مصقولة وتطبيقات مذهلة ورسائل تعريفية ومواقع ويب بسهولة وبسرعة</p>
         </div>
     </section>
-    <section class="u-align-center u-clearfix u-palette-5-dark-3 u-section-2" id="carousel_4147">
+    <section class="u-align-center u-clearfix u-palette-5-dark-3 u-section-2" id="section-1">
         <div class="u-clearfix u-sheet u-sheet-1">
             <h1 class="u-text u-text-1"> خطط الباقات</h1>
-            <a href="dashboard.html"
+            <a href="javascript:void(0);" id="btn-yearly"
                 class="u-align-center u-border-none u-btn u-btn-round u-button-style u-custom-color-2 u-hidden-md u-hidden-sm u-hidden-xs u-hover-feature u-hover-palette-1-light-1 u-radius u-btn-1">سنوي
             </a>
-            <a href="dashboard.html"
+            <a href="javascript:void(0);" id="btn-monthly"
                 class="u-align-center u-border-none u-btn u-btn-round u-button-style u-hidden-md u-hidden-sm u-hidden-xs u-hover-feature u-hover-palette-1-light-1 u-palette-1-base u-radius u-btn-2">شهري
             </a>
             <div class="u-expanded-width u-table u-table-responsive u-table-1">
@@ -265,13 +269,13 @@
 
 
     </section>
-    <section class="u-align-center u-clearfix u-palette-5-dark-3 u-section-3" id="carousel_a926">
+    <section class="u-align-center u-clearfix u-palette-5-dark-3 u-section-3 hidden" id="section-2">
         <div class="u-clearfix u-sheet u-sheet-1">
             <h1 class="u-text u-text-1"> خطط الباقات</h1>
-            <a href="dashboard.html"
+            <a href="javascript:void(0);" id="btn-yearly-2"
                 class="u-align-center u-border-none u-btn u-btn-round u-button-style u-hidden-md u-hidden-sm u-hidden-xs u-hover-feature u-hover-palette-1-light-1 u-palette-1-base u-radius u-btn-1">سنوي
             </a>
-            <a href="dashboard.html"
+            <a href="javascript:void(0);" id="btn-monthly-2"
                 class="u-align-center u-border-none u-btn u-btn-round u-button-style u-custom-color-2 u-hidden-md u-hidden-sm u-hidden-xs u-hover-feature u-hover-palette-1-light-1 u-radius u-btn-2">شهري
             </a>
             <div class="u-expanded-width u-table u-table-responsive u-table-1">
@@ -763,7 +767,7 @@
                         href="Cover-letter-builder.html"> منشئ خطاب الغلاف</a>
                 </h6>
                 <img class="u-align-left u-image u-image-default u-image-1"
-                    src="np://user.desktop.nicepage.com/Site_21965965/../../images/ai-features-en.webp?rand=b236" alt=""
+                    src="../../images/ai-features-en.webp" alt=""
                     data-image-width="1200" data-image-height="793">
                 <h6
                     class="u-align-center-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-align-right-xxl u-text u-text-default u-text-2">
@@ -1344,6 +1348,30 @@
         }
     }
     </style>
+
+
+<script>
+    document.getElementById('btn-yearly').addEventListener('click', function() {
+        document.getElementById('section-1').classList.add('hidden');
+        document.getElementById('section-2').classList.remove('hidden');
+    });
+
+    document.getElementById('btn-monthly').addEventListener('click', function() {
+        document.getElementById('section-1').classList.add('hidden');
+        document.getElementById('section-2').classList.remove('hidden');
+    });
+
+    document.getElementById('btn-yearly-2').addEventListener('click', function() {
+        document.getElementById('section-2').classList.add('hidden');
+        document.getElementById('section-1').classList.remove('hidden');
+    });
+
+    document.getElementById('btn-monthly-2').addEventListener('click', function() {
+        document.getElementById('section-2').classList.add('hidden');
+        document.getElementById('section-1').classList.remove('hidden');
+    });
+</script>
+
 </body>
 
 </html>
