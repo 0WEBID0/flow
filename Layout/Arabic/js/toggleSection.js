@@ -11,12 +11,20 @@ function toggleSection(sectionNumber) {
 }
 
 function details(detailsNumber) {
+    var form1 = document.getElementById('form1');
+    var form2 = document.getElementById('form2');
+    var form3 = document.getElementById('form3');
+    var form4 = document.getElementById('form4');
     for (let i = 1; i <= 4; i++) {
         let details = document.getElementById(`details${i}`);
         if (i === detailsNumber) {
             details.classList.remove('hidden');
         } else {
             details.classList.add('hidden');
+            form1.classList.add('hidden');
+            form2.classList.add('hidden');
+            form3.classList.add('hidden');
+            form4.classList.add('hidden');
         }
     }
 }
