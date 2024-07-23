@@ -18346,6 +18346,7 @@ p {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  padding-bottom: 140px;
 }
 .u-container-style.u-hover-feature:before {
   opacity: 0;

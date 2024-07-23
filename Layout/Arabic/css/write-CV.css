@@ -1762,7 +1762,7 @@
   height: auto;
   min-height: 74px;
   margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: -110px;
 }
 
 .u-section-1 .u-container-layout-31 {
@@ -4889,8 +4889,8 @@
   }
 
   .u-section-1 .u-btn-28 {
-    margin-top: -39px;
-    margin-left: 123px;
+    margin-top: -44px;
+    margin-left: 15px;
   }
 
   .u-section-1 .u-layout-cell-3 {
