@@ -23,7 +23,7 @@
     id="sec-cae4">
     <div
       class="custom-expanded u-align-center u-container-style u-group u-hover-feature u-radius u-shape-round u-white u-group-1">
-      <div class="u-container-layout">
+      <div class="u-container-layout" id="sec-ca32">
         <a href="../../../index.html" class="u-align-right u-enable-responsive u-image u-logo u-image-1" data-image-width="1983"
           data-image-height="516" title="Home">
           <img src="../../images/001-LOGO-02.png" class="u-logo-image u-logo-image-1">
@@ -904,7 +904,32 @@
     .u-dialog-section-8 .u-btn-5>.u-container-layout:before {
       transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
     }
-  </style>
+
+    .header {
+      transition: background-color 0.3s;
+    }
+
+    .scrolled {
+      background-color: #e3e3e3;
+      /* اللون الجديد عند التمرير */
+    }
+    
+    </style>
+
+
+
+<script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('sec-ca32');
+      if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+  
 </body>
 
 </html>
