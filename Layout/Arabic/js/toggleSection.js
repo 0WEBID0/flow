@@ -64,3 +64,21 @@ function form4() {
         form4.classList.add('hidden');
     }
 }
+
+function togglerow1() {
+    var formclient1 = document.getElementById('formclient1');
+    if (formclient1.classList.contains('hidden')) {
+        formclient1.classList.remove('hidden');
+    }else {
+        formclient1.classList.add('hidden');
+    }
+}
+
+function togglecode1() {
+    var formcode1 = document.getElementById('formcode1');
+    if (formcode1.classList.contains('hidden')) {
+        formcode1.classList.remove('hidden');
+    }else {
+        formcode1.classList.add('hidden');
+    }
+}
