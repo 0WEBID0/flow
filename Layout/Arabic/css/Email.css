@@ -1,0 +1,35 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 100vh;
+}
+
+.u-section-1 .u-group-1 {
+  min-height: 1109px;
+  height: auto;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 15px;
+}
+
+.u-section-1 .u-text-1 {
+  margin: 0 0 0 auto;
+}
+
+@media (max-width: 1399px) {
+  .u-section-1 .u-group-1 {
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
