@@ -76,9 +76,22 @@ function togglerow1() {
 
 function togglecode1() {
     var formcode1 = document.getElementById('formcode1');
+    var formcode2 = document.getElementById('formcode2');
     if (formcode1.classList.contains('hidden')) {
         formcode1.classList.remove('hidden');
+        formcode2.classList.add('hidden');
     }else {
         formcode1.classList.add('hidden');
+    }
+}
+
+function togglecode2() {
+    var formcode1 = document.getElementById('formcode1');
+    var formcode2 = document.getElementById('formcode2');
+    if (formcode2.classList.contains('hidden')) {
+        formcode2.classList.remove('hidden');
+        formcode1.classList.add('hidden');
+    }else {
+        formcode2.classList.add('hidden');
     }
 }
