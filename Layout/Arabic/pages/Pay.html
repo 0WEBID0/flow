@@ -16,6 +16,13 @@
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,500,600,700,800,900|Tajawal:200,300,400,500,700,800,900">
     <meta data-intl-tel-input-cdn-path="../../../Includes/Libraries/intlTelInput/">
+
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+
 </head>
 
 <body data-path-to-root="./" data-include-products="false" class="u-body u-xxl-mode" data-lang="ar">
@@ -129,7 +136,7 @@
                                             10% خصم علي اول شهر</p>
                                     </div>
                                 </div>
-                                <div class="u-container-style u-expanded-width u-group u-radius u-shape-round u-white u-group-2"
+                                <div class="u-container-style u-expanded-width u-group u-radius u-shape-round u-white u-group-2 hidden" id="codewrite1"
                                     data-animation-name="customAnimationIn" data-animation-duration="1000"
                                     data-animation-delay="0">
                                     <div class="u-container-layout u-container-layout-3">
@@ -305,7 +312,7 @@
                                             تتمتع بتجربه ممتازه في الموقع مع عروض لا حصر له وانشاء مع تريد اينما تريد
                                         </p>
                                         <div class="rtl u-expanded-width u-form u-form-2">
-                                            <form action="https://forms.nicepagesrv.com/v2/form/process"
+                                            <form action="#"
                                                 class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                 source="email" name="form-1" style="padding: 10px;">
                                                 <p class="u-form-group u-form-text u-label-none u-text u-text-17"> طرق
@@ -382,10 +389,10 @@
                                                     <label class="u-label">Checks</label>
                                                     <div class="u-form-checkbox-group-wrapper">
                                                         <div class="u-input-row">
-                                                            <input id="field-3c4e" type="checkbox" name="checkbox[]"
-                                                                value="اضف كود خصم" class="u-field-input"
-                                                                data-calc="اضف كود خصم">
-                                                            <label class="u-field-label">اضف كود خصم</label>
+                                                            <input id="field-3c4e" type="checkbox" name="checkbox[]" onclick="togglecodewrite1()"
+                                                                value="اضف كود الخصم" class="u-field-input"
+                                                                data-calc="اضف كود الخصم">
+                                                            <label class="u-field-label">اضف كود الخصم</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1003,6 +1010,9 @@
         transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
     }
     </style>
+
+
+<script src="../js/toggleSection.js"></script>
 </body>
 
 </html>

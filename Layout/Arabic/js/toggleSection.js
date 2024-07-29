@@ -95,3 +95,12 @@ function togglecode2() {
         formcode2.classList.add('hidden');
     }
 }
+
+function togglecodewrite1() {
+    var codewrite1 = document.getElementById('codewrite1');
+    if (codewrite1.classList.contains('hidden')) {
+        codewrite1.classList.remove('hidden');
+    }else {
+        codewrite1.classList.add('hidden');
+    }
+}
