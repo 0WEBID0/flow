@@ -1,10 +1,21 @@
 var basebtn = document.getElementById('basebtn');
 var save = document.getElementById('save');
+
+var section1 = document.getElementById('section1');
+var section2 = document.getElementById('section2');
 for (var i = 1; i <= 14; i++) {
     divs.push(document.getElementById('Div' + i));
 }
 
-
+function toggleDivsection0() {
+    if (section1.style.display !== 'none') {
+        section2.style.display = 'block';
+        section1.style.display = 'none';
+    }else{
+        section1.style.display = 'block';
+        section2.style.display = 'none';
+    }
+}
 
 
 function toggleDivs0() {
