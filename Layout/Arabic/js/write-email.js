@@ -1,35 +1,5 @@
-var save = document.getElementById('save');
-var cover1 = document.getElementById('cover1');
-var cover2 = document.getElementById('cover2');
-var cover3 = document.getElementById('cover3');
-var cover4 = document.getElementById('cover4');
-var cover5 = document.getElementById('cover5');
 var section1 = document.getElementById('section1');
 var section2 = document.getElementById('section2');
-
-
-
-function toggleDivscover0() {
-    if (cover1.style.display !== 'none') {
-        save.style.display = 'flex';
-        cover1.style.display = 'none';
-        cover2.style.display = 'block';
-        cover3.style.display = 'none';
-        cover4.style.display = 'none';
-        cover5.style.display = 'none';
-    }
-}
-
-function toggleDivscover1() {
-    if (cover1.style.display !== 'block') {
-        save.style.display = 'none';
-        cover1.style.display = 'block';
-        cover2.style.display = 'none';
-        cover3.style.display = 'block';
-        cover4.style.display = 'block';
-        cover5.style.display = 'block';
-    }
-}
 
 function toggleDivsection0() {
     if (section1.style.display !== 'none') {
@@ -40,7 +10,6 @@ function toggleDivsection0() {
         section2.style.display = 'none';
     }
 }
-
 
 function changeImage(imageNumber) {
     switch (imageNumber) {
