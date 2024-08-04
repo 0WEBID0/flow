@@ -1,36 +1,216 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="ar-EG">
+<html style="font-size: 14px;" lang="ar-EG">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>CV</title>
+    <meta name="keywords" content="CV, السيرة الذاتية, سيرة ذاتية">
+    <meta name="description" content="صفحة السيرة الذاتية الخاصة بك">
+    <title>السيرة الذاتية</title>
     <link rel="stylesheet" href="../../../Includes/Libraries/Bootstrap/bootstrap.css" media="screen">
     <link rel="stylesheet" href="../css/CV.css" media="screen">
-    <script class="u-script" type="text/javascript" src="../../../Includes/Libraries/JQuery/jquery.js" defer="">
-    </script>
-    <script class="u-script" type="text/javascript" src="../../../Includes/Libraries/Bootstrap/bootstrap.js" defer="">
-    </script>
+    <script class="u-script" type="text/javascript" src="../../../Includes/Libraries/JQuery/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../../../Includes/Libraries/Bootstrap/bootstrap.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,500,600,700,800,900|Tajawal:200,300,400,500,700,800,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js" defer></script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* إخفاء التمرير */
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            page-break-inside: avoid;
+            overflow: hidden;
+        }
+
+        .cv-header {
+            background-color: #745c68;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .cv-header h2 {
+            margin: 0;
+            font-size: 20px;
+            /* تصغير حجم الخط */
+        }
+
+        .cv-header h4 {
+            margin: 0;
+            font-size: 18px;
+            /* تصغير حجم الخط */
+        }
+
+        .cv-section {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .cv-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .cv-section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333333;
+            position: relative;
+        }
+
+        .cv-section .info {
+            line-height: 1.6;
+            color: #555555;
+            page-break-inside: avoid;
+            font-size: 14px;
+            /* تصغير حجم الخط */
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .cv-section .info span {
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .cv-section .info i {
+            margin-left: 8px;
+            /* إضافة مسافة بين الأيقونة والنص */
+            font-size: 16px;
+            /* حجم الأيقونة */
+            color: #745c68;
+            /* لون الأيقونة */
+            display: none;
+            /* إخفاء الأيقونة بشكل افتراضي */
+        }
+
+        /* إعدادات خاصة بملفات PDF */
+        @media print {
+            body {
+                background-color: #ffffff;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border: none;
+            }
+
+            .cv-header {
+                page-break-before: always;
+            }
+
+            .cv-section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
 
 <body data-path-to-root="./" data-include-products="false" class="u-body u-xxl-mode" data-lang="ar">
-    <section class="u-clearfix u-grey-10 u-section-1" id="sec-c474" style="height: 1000px;">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <div class="u-container-style u-expanded-width u-group u-palette-2-base u-group-1">
-                <div class="u-container-layout u-container-layout-1">
-                    <div class="custom-expanded u-container-style u-custom-color-11 u-group u-group-2">
-                        <div class="u-container-layout u-valign-top u-container-layout-2">
-                            <h6 class="u-align-right u-text u-text-default u-text-1">Sample Headline</h6>
-                        </div>
-                    </div>
+
+    <section class="u-clearfix u-grey-10 u-section-1" id="sec-c474">
+        <div class="u-clearfix u-sheet u-sheet-1" style="min-height: 100vh;">
+            <div class="cv-container" id="cv" style="height: 930px;">
+                <div class="cv-header">
+                    <h2 id="name"><span></span></h2>
+                    <h4 id="job"><span></span></h4>
+                </div>
+                <div class="cv-section">
+                    <h3><i class="fas fa-info-circle"></i> معلومات الاتصال</h3>
+                    <div class="info" id="email"><i class="fas fa-envelope"></i> <span></span></div>
+                    <div class="info" id="display-phone"><i class="fas fa-phone"></i> <span></span></div>
+                    <div class="info" id="display-address"><i class="fas fa-map-marker-alt"></i> <span></span></div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        function updateCV(name, job, email, phone, address) {
+            // تحديث النصوص
+            document.querySelector('#name span').textContent = name;
+            document.querySelector('#job span').textContent = job;
+            document.querySelector('#email span').textContent = email;
+            document.querySelector('#display-phone span').textContent = phone;
+            document.querySelector('#display-address span').textContent = address;
+
+            // التحقق من وجود نص لإظهار الأيقونات
+            toggleIconVisibility('#email', email);
+            toggleIconVisibility('#display-phone', phone);
+            toggleIconVisibility('#display-address', address);
+        }
+
+        // دالة لإظهار أو إخفاء الأيقونة بناءً على وجود النص
+        function toggleIconVisibility(selector, text) {
+            const element = document.querySelector(selector + ' i');
+            if (text && text.trim().length > 0) {
+                element.style.display = 'inline-block'; // إظهار الأيقونة
+            } else {
+                element.style.display = 'none'; // إخفاء الأيقونة
+            }
+        }
+
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'updateCV') {
+                updateCV(event.data.name, event.data.job, event.data.email, event.data.phone, event.data.address);
+                // حفظ إلى localStorage
+                localStorage.setItem('cvData', JSON.stringify(event.data));
+            } else if (event.data.type === 'downloadPDF') {
+                const cvElement = document.getElementById('cv');
+                const options = {
+                    margin: 0.5,
+                    filename: 'CV.pdf',
+                    image: {
+                        type: 'jpeg',
+                        quality: 0.98
+                    },
+                    html2canvas: {
+                        scale: 2
+                    },
+                    jsPDF: {
+                        unit: 'in',
+                        format: 'letter',
+                        orientation: 'portrait'
+                    }
+                };
+                html2pdf().set(options).from(cvElement).save();
+            }
+        });
+
+        // تحميل البيانات من localStorage
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const savedData = localStorage.getItem('cvData');
+            if (savedData) {
+                const {
+                    name,
+                    job,
+                    email,
+                    phone,
+                    address
+                } = JSON.parse(savedData);
+                updateCV(name, job, email, phone, address);
+            }
+        });
+    </script>
+
 </body>
 
 </html>

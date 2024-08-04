@@ -36,7 +36,7 @@
                     <div
                         class="u-container-style u-hidden-md u-hidden-sm u-hidden-xs u-layout-cell u-size-33 u-layout-cell-1">
                         <div class="u-container-layout u-container-layout-1">
-                            <iframe src="CV.html" width="100%" height="1000px"
+                            <iframe src="CV.html" width="100%" height="1000px" id="cvIframe"
                                 style="border: none; overflow: hidden;"></iframe>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                                         <span class="u-file-icon u-icon u-icon-1"><img src="../../images/2356780.png"
                                                 alt=""></span>&nbsp;قالب رقم 1
                                     </h6>
-                                    <a href="#"
+                                    <a onclick="downloadCV()"
                                         class="u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-1-light-1 u-palette-1-base u-radius u-btn-1"><span
                                             class="u-file-icon u-icon u-text-white u-icon-2"><img
                                                 src="../../images/7257793-222b5370.png" alt=""></span>&nbsp;تحميل
@@ -130,19 +130,19 @@
                                         
                                         
                                         
-                                        <form action="#"
+                                        <form action="#" id="userForm"
                                             class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
-                                            source="email" name="form" style="padding: 10px;">
+                                            source="name" name="form" style="padding: 10px;">
                                             <div class="u-form-group u-form-name u-label-top">
                                                 <label for="name-055b" class="u-label u-label-1">الاسم</label>
                                                 <input type="text" placeholder="ادخل اسمك الكامل" id="name-055b"
-                                                    name="name" class="u-border-none u-input u-input-rectangle"
+                                                    name="name" class="u-border-none u-input u-input-rectangle" oninput="sendData()"
                                                     required="">
                                             </div>
                                             <div class="u-form-group u-label-top">
                                                 <label for="email-055b" class="u-label u-label-2">اسم الوظيفة</label>
                                                 <input type="text" placeholder="ادخل اسم الوظيفة الحالية"
-                                                    id="email-055b" name="job"
+                                                    id="job-055b" name="job" oninput="sendData()"
                                                     class="u-border-none u-input u-input-rectangle" required="required">
                                             </div>
                                             <div
@@ -150,14 +150,14 @@
                                                 <label for="message-055b" class="u-label u-label-3">البريد
                                                     الالكتروني</label>
                                                 <input placeholder="ادخل بريدك الالكتروني الحالي" rows="4" cols="50"
-                                                    id="message-055b" name="email"
+                                                    id="email-055b" name="email" oninput="sendData()"
                                                     class="u-border-none u-input u-input-rectangle" required="required"
                                                     type="email">
                                             </div>
                                             <div
                                                 class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-4">
                                                 <label for="phone-93c9" class="u-label u-label-4">رقم الهاتف</label>
-                                                <input type="text" placeholder="ادخل رقم هاتفك" id="phone-93c9"
+                                                <input type="text" placeholder="ادخل رقم هاتفك" id="phone-93c9" oninput="sendData()"
                                                     name="phone" class="u-border-none u-input u-input-rectangle">
                                             </div>
                                             <div class="u-form-group u-label-top u-form-group-5">
@@ -331,15 +331,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="u-align-left u-form-group u-form-submit u-label-top">
-                                                <a href="#" class="u-btn u-btn-submit u-button-style u-btn-3"></a>
-                                                <input type="submit" value="submit" class="u-form-control-hidden">
-                                            </div>
-                                            <div class="u-form-send-message u-form-send-success"> Thank you! Your
-                                                message has been sent. </div>
-                                            <div class="u-form-send-error u-form-send-message"> Unable to send your
-                                                message. Please fix errors then try again. </div>
-                                            <input type="hidden" value="" name="recaptchaResponse">
                                         </form>
 
 
@@ -356,6 +347,46 @@
                             </div>
 
 
+                            <script>
+                                function sendData() {
+                                    const name = document.getElementById('name-055b').value;
+                                    const job = document.getElementById('job-055b').value;
+                                    const email = document.getElementById('email-055b').value;
+                                    const phone = document.getElementById('phone-93c9').value;
+                        
+                                    const data = {
+                                        type: 'updateCV',
+                                        name: name,
+                                        job: job,
+                                        email: email,
+                                        phone: phone
+                                    };
+                        
+                                    const iframe = document.getElementById('cvIframe');
+                                    iframe.contentWindow.postMessage(data, '*');
+                        
+                                    // Save data to localStorage
+                                    localStorage.setItem('cvData', JSON.stringify(data));
+                                }
+                        
+                                function downloadCV() {
+                                    const iframe = document.getElementById('cvIframe');
+                                    iframe.contentWindow.postMessage({ type: 'downloadPDF' }, '*');
+                                }
+                        
+                                // Load data from localStorage
+                                document.addEventListener('DOMContentLoaded', (event) => {
+                                    const savedData = localStorage.getItem('cvData');
+                                    if (savedData) {
+                                        const { name, job, email, phone } = JSON.parse(savedData);
+                                        document.getElementById('name-055b').value = name;
+                                        document.getElementById('job-055b').value = job;
+                                        document.getElementById('email-055b').value = email;
+                                        document.getElementById('phone-93c9').value = phone;
+                                        sendData(); // Send data to iframe
+                                    }
+                                });
+                            </script>
 
 
 
