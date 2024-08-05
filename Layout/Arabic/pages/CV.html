@@ -136,26 +136,47 @@
                 <div class="cv-section">
                     <h3><i class="fas fa-info-circle"></i> معلومات الاتصال</h3>
                     <div class="info" id="email"><i class="fas fa-envelope"></i> <span></span></div>
-                    <div class="info" id="display-phone"><i class="fas fa-phone"></i> <span></span></div>
-                    <div class="info" id="display-address"><i class="fas fa-map-marker-alt"></i> <span></span></div>
+                    <div class="info" id="phone"><i class="fas fa-phone"></i> <span></span></div>
+                    <div class="info" id="address"><i class="fas fa-map-marker-alt"></i> <span></span></div>
+                    <div class="info" id="date"><i class="fas fa-calendar-day"></i> <span></span></div>
+                    <div class="info" id="nationality"><i class="fas fa-flag"></i> <span></span></div>
+                    <div class="info" id="identity"><i class="fas fa-id-card"></i> <span></span></div>
+                    <div class="info" id="caseman"><i class="fas fa-ring"></i> <span></span></div>
+                    <div class="info" id="militaryservice"><i class="fas fa-helmet-safety"></i> <span></span></div>
+                    <div class="info" id="drive"><i class="fas fa-user-tie"></i> <span></span></div>
+                    <div class="info" id="gender"><i class="fas fa-mars"></i> <span></span></div>
                 </div>
             </div>
         </div>
     </section>
 
     <script>
-        function updateCV(name, job, email, phone, address) {
+        function updateCV(name, job, email, phone, address, date, nationality, identity, caseman, militaryservice, drive, gender) {
             // تحديث النصوص
             document.querySelector('#name span').textContent = name;
             document.querySelector('#job span').textContent = job;
             document.querySelector('#email span').textContent = email;
-            document.querySelector('#display-phone span').textContent = phone;
-            document.querySelector('#display-address span').textContent = address;
+            document.querySelector('#phone span').textContent = phone;
+            document.querySelector('#address span').textContent = address;
+            document.querySelector('#date span').textContent = date;
+            document.querySelector('#nationality span').textContent = nationality;
+            document.querySelector('#identity span').textContent = identity;
+            document.querySelector('#caseman span').textContent = caseman;
+            document.querySelector('#militaryservice span').textContent = militaryservice;
+            document.querySelector('#drive span').textContent = drive;
+            document.querySelector('#gender span').textContent = gender;
 
             // التحقق من وجود نص لإظهار الأيقونات
             toggleIconVisibility('#email', email);
-            toggleIconVisibility('#display-phone', phone);
-            toggleIconVisibility('#display-address', address);
+            toggleIconVisibility('#phone', phone);
+            toggleIconVisibility('#address', address);
+            toggleIconVisibility('#date', date);
+            toggleIconVisibility('#nationality', nationality);
+            toggleIconVisibility('#identity', identity);
+            toggleIconVisibility('#caseman', caseman);
+            toggleIconVisibility('#militaryservice', militaryservice);
+            toggleIconVisibility('#drive', drive);
+            toggleIconVisibility('#gender', gender);
         }
 
         // دالة لإظهار أو إخفاء الأيقونة بناءً على وجود النص
@@ -170,7 +191,7 @@
 
         window.addEventListener('message', function(event) {
             if (event.data.type === 'updateCV') {
-                updateCV(event.data.name, event.data.job, event.data.email, event.data.phone, event.data.address);
+                updateCV(event.data.name, event.data.job, event.data.email, event.data.phone, event.data.address, event.data.date, event.data.nationality, event.data.identity, event.data.caseman, event.data.militaryservice, event.data.drive, event.data.gender);
                 // حفظ إلى localStorage
                 localStorage.setItem('cvData', JSON.stringify(event.data));
             } else if (event.data.type === 'downloadPDF') {
@@ -204,9 +225,16 @@
                     job,
                     email,
                     phone,
-                    address
+                    address,
+                    date,
+                    nationality,
+                    identity,
+                    caseman,
+                    militaryservice,
+                    drive,
+                    gender
                 } = JSON.parse(savedData);
-                updateCV(name, job, email, phone, address);
+                updateCV(name, job, email, phone, address, date, nationality, identity, caseman, militaryservice, drive, gender);
             }
         });
     </script>

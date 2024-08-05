@@ -3,6 +3,9 @@ var save = document.getElementById('save');
 
 var section1 = document.getElementById('section1');
 var section2 = document.getElementById('section2');
+
+var divs = []; // تعريف مصفوفة divs
+
 for (var i = 1; i <= 14; i++) {
     divs.push(document.getElementById('Div' + i));
 }

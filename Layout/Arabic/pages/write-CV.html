@@ -17,17 +17,52 @@
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,500,600,700,800,900|Tajawal:200,300,400,500,700,800,900">
     <meta data-intl-tel-input-cdn-path="../../../Includes/Libraries/intlTelInput/">
+
+    <style>
+    .u-input-row {
+        margin-bottom: 10px;
+    }
+
+    .input-wrapper {
+        margin-top: 20px;
+    }
+
+    .input-label {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .u-border-none {
+        border: none;
+    }
+
+    .u-input-rectangle {
+        width: 100%;
+        padding: 8px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    .u-input-rectangle:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    .u-form-group {
+        margin-bottom: 15px;
+    }
+    </style>
 </head>
 
 <body data-path-to-root="./" data-include-products="false" class="u-body u-xxl-mode" data-lang="en"
     style="background-color: #e5e5e5;">
 
-
-
-
-
     <!----------------------------------------------------- start CV -------------------------------------------------------->
-
 
     <section class="u-clearfix u-grey-10 u-section-1" id="section1">
         <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -41,17 +76,12 @@
                         </div>
                     </div>
 
-
                     <!----------------------------------------------------- end CV -------------------------------------------------------->
-
 
                     <div class="u-container-style u-layout-cell u-size-21 u-layout-cell-2">
                         <div class="u-container-layout u-valign-top-xs u-container-layout-4">
 
-
-
                             <!----------------------------------------------------- start nav -------------------------------------------------------->
-
 
                             <div class="u-container-style u-expanded-width u-group u-radius u-shape-round u-white u-group-3"
                                 data-animation-name="" data-animation-duration="0" data-animation-delay="0"
@@ -70,15 +100,9 @@
                                 </div>
                             </div>
 
-
                             <!----------------------------------------------------- end nav -------------------------------------------------------->
 
-
-
-
                             <!----------------------------------------------------- end form 0 -------------------------------------------------------->
-
-
 
                             <a onclick="toggleDivs0()">
                                 <div id="Div1"
@@ -89,13 +113,7 @@
                                 </div>
                             </a>
 
-
-
                             <!----------------------------------------------------- end form 0 -------------------------------------------------------->
-
-
-
-
 
                             <!----------------------------------------------------- start pop -------------------------------------------------------->
 
@@ -105,12 +123,7 @@
                                         src="../../images/1665629-e8438692.png" alt=""></span>&nbsp;اضافه محتوي اخر
                             </a>
 
-
-
                             <!----------------------------------------------------- end pop -------------------------------------------------------->
-
-
-
 
                             <!----------------------------------------------------- start form 1 -------------------------------------------------------->
 
@@ -120,29 +133,20 @@
                                     <h5 class="u-align-right u-text u-text-default u-text-3"> تحرير التفاصيل الشخصية
                                     </h5>
                                     <div class="rtl u-expanded-width u-form u-form-1">
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
+
                                         <form action="#" id="userForm"
                                             class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                             source="name" name="form" style="padding: 10px;">
                                             <div class="u-form-group u-form-name u-label-top">
                                                 <label for="name-055b" class="u-label u-label-1">الاسم</label>
                                                 <input type="text" placeholder="ادخل اسمك الكامل" id="name-055b"
-                                                    name="name" class="u-border-none u-input u-input-rectangle" oninput="sendData()"
-                                                    required="">
+                                                    name="name" class="u-border-none u-input u-input-rectangle"
+                                                    oninput="sendData()" required="">
                                             </div>
                                             <div class="u-form-group u-label-top">
                                                 <label for="email-055b" class="u-label u-label-2">اسم الوظيفة</label>
-                                                <input type="text" placeholder="ادخل اسم الوظيفة الحالية"
-                                                    id="job-055b" name="job" oninput="sendData()"
+                                                <input type="text" placeholder="ادخل اسم الوظيفة الحالية" id="job-055b"
+                                                    name="job" oninput="sendData()"
                                                     class="u-border-none u-input u-input-rectangle" required="required">
                                             </div>
                                             <div
@@ -157,24 +161,25 @@
                                             <div
                                                 class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-4">
                                                 <label for="phone-93c9" class="u-label u-label-4">رقم الهاتف</label>
-                                                <input type="text" placeholder="ادخل رقم هاتفك" id="phone-93c9" oninput="sendData()"
-                                                    name="phone" class="u-border-none u-input u-input-rectangle">
+                                                <input type="text" placeholder="ادخل رقم هاتفك" id="phone-93c9"
+                                                    oninput="sendData()" name="phone"
+                                                    class="u-border-none u-input u-input-rectangle">
                                             </div>
                                             <div class="u-form-group u-label-top u-form-group-5">
-                                                <label for="text-909c" class="u-label u-label-5">العنوان</label>
-                                                <input type="text" placeholder="الدولة والمدينة" id="text-909c"
-                                                    name="address" class="u-border-none u-input u-input-rectangle">
+                                                <label for="address-909c" class="u-label u-label-5">العنوان</label>
+                                                <input type="text" placeholder="الدولة والمدينة" id="address-909c"
+                                                    oninput="sendData()" name="address"
+                                                    class="u-border-none u-input u-input-rectangle">
                                             </div>
                                             <p
                                                 class="u-form-group u-form-text u-label-top u-text u-text-custom-color-1 u-text-4">
                                                 معلومات شخصية </p>
                                             <div
                                                 class="u-form-checkbox-group u-form-group u-form-input-layout-horizontal u-label-top u-form-group-7">
-                                                <label class="u-label u-label-6">Checks</label>
                                                 <div class="u-form-checkbox-group-wrapper">
                                                     <div class="u-input-row">
                                                         <input id="field-e843" type="checkbox" name="checkbox[]"
-                                                            value="تاريخ الميلاد"
+                                                            value="date"
                                                             class="u-active-palette-1-base u-field-input" data-calc="">
                                                         <label class="u-field-label u-text-palette-5-dark-2"
                                                             for="field-e843"
@@ -183,7 +188,7 @@
                                                     </div>
                                                     <div class="u-input-row">
                                                         <input id="field-7840" type="checkbox" name="checkbox[]"
-                                                            value="الجنسية"
+                                                            value="nationality"
                                                             class="u-active-palette-1-base u-field-input" data-calc="">
                                                         <label class="u-field-label u-text-palette-5-dark-2"
                                                             for="field-7840"
@@ -191,7 +196,7 @@
                                                     </div>
                                                     <div class="u-input-row">
                                                         <input id="field-f890" type="checkbox" name="checkbox[]"
-                                                            value="الهوية" class="u-active-palette-1-base u-field-input"
+                                                            value="identity" class="u-active-palette-1-base u-field-input"
                                                             data-calc="">
                                                         <label class="u-field-label u-text-palette-5-dark-2"
                                                             for="field-f890"
@@ -199,7 +204,7 @@
                                                     </div>
                                                     <div class="u-input-row">
                                                         <input id="field-dd25" type="checkbox" name="checkbox[]"
-                                                            value="الحالة الاجتماعية"
+                                                            value="caseman"
                                                             class="u-active-palette-1-base u-field-input" data-calc="">
                                                         <label class="u-field-label u-text-palette-5-dark-2"
                                                             for="field-dd25"
@@ -208,7 +213,7 @@
                                                     </div>
                                                     <div class="u-input-row">
                                                         <input id="field-8f5a" type="checkbox" name="checkbox[]"
-                                                            value="الخدمة العسكرية"
+                                                            value="militaryservice"
                                                             class="u-active-palette-1-base u-field-input" data-calc="">
                                                         <label class="u-field-label u-text-palette-5-dark-2"
                                                             for="field-8f5a"
@@ -217,7 +222,7 @@
                                                     </div>
                                                     <div class="u-input-row">
                                                         <input id="field-7090" type="checkbox" name="checkbox[]"
-                                                            value="رخصة قيادة"
+                                                            value="drive"
                                                             class="u-active-palette-1-base u-field-input" data-calc="">
                                                         <label class="u-field-label u-text-palette-5-dark-2"
                                                             for="field-7090"
@@ -226,7 +231,7 @@
                                                     </div>
                                                     <div class="u-input-row">
                                                         <input id="field-c84c" type="checkbox" name="checkbox[]"
-                                                            value="الجنس" class="u-active-palette-1-base u-field-input"
+                                                            value="gender" class="u-active-palette-1-base u-field-input"
                                                             data-calc="">
                                                         <label class="u-field-label u-text-palette-5-dark-2"
                                                             for="field-c84c"
@@ -234,12 +239,81 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- مكان لعرض حقول الإدخال المتعددة -->
+                                            <div class="input-wrapper" id="inputs-container-1">
+                                                <div class="hidden-inputs">
+                                                    <div class="u-form-group u-label-top" id="hidden-field-date"
+                                                        style="display: none;">
+                                                        <label for="input-date" class="u-label u-label-5">تاريخ
+                                                            الميلاد</label>
+                                                        <input type="text" placeholder="تاريخ الميلاد" id="input-date"
+                                                            name="input-date" oninput="sendData()"
+                                                            class="u-border-none u-input u-input-rectangle">
+                                                    </div>
+                                                    <div class="u-form-group u-label-top" id="hidden-field-nationality"
+                                                        style="display: none;">
+                                                        <label for="input-nationality"
+                                                            class="u-label u-label-5">الجنسية</label>
+                                                        <input type="text" placeholder="الجنسية" id="input-nationality"
+                                                            name="input-nationality" oninput="sendData()"
+                                                            class="u-border-none u-input u-input-rectangle">
+                                                    </div>
+                                                    <div class="u-form-group u-label-top" id="hidden-field-identity"
+                                                    style="display: none;">
+                                                    <label for="input-identity"
+                                                        class="u-label u-label-5">الهوية</label>
+                                                    <input type="text" placeholder="الهوية" id="input-identity"
+                                                        name="input-identity" oninput="sendData()"
+                                                        class="u-border-none u-input u-input-rectangle">
+                                                    </div>
+                                                    <div class="u-form-group u-label-top" id="hidden-field-caseman"
+                                                    style="display: none;">
+                                                    <label for="input-caseman"
+                                                        class="u-label u-label-5">الحالة الاجتماعية</label>
+                                                    <input type="text" placeholder="الحالة الاجتماعية" id="input-caseman"
+                                                        name="input-caseman" oninput="sendData()"
+                                                        class="u-border-none u-input u-input-rectangle">
+                                                    </div>
+                                                    <div class="u-form-group u-label-top" id="hidden-field-militaryservice"
+                                                    style="display: none;">
+                                                    <label for="input-militaryservice"
+                                                        class="u-label u-label-5">الخدمة العسكرية</label>
+                                                    <input type="text" placeholder="الخدمة العسكرية" id="input-militaryservice"
+                                                        name="input-militaryservice" oninput="sendData()"
+                                                        class="u-border-none u-input u-input-rectangle">
+                                                    </div>
+                                                    <div class="u-form-group u-label-top" id="hidden-field-drive"
+                                                    style="display: none;">
+                                                    <label for="input-drive"
+                                                        class="u-label u-label-5">رخصة قيادة</label>
+                                                    <input type="text" placeholder="رخصة قيادة" id="input-drive"
+                                                        name="input-drive" oninput="sendData()"
+                                                        class="u-border-none u-input u-input-rectangle">
+                                                    </div>
+                                                    <div class="u-form-group u-label-top" id="hidden-field-gender"
+                                                    style="display: none;">
+                                                    <label for="input-gender"
+                                                        class="u-label u-label-5">الجنس</label>
+                                                    <input type="text" placeholder="الجنس" id="input-gender"
+                                                        name="input-gender" oninput="sendData()"
+                                                        class="u-border-none u-input u-input-rectangle">
+                                                    </div>
+
+                                                    <!-- أضف المزيد من الحقول هنا -->
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                        <form action="#" id="userForm1"
+                                            class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+                                            source="name" name="form" style="padding: 10px;">
                                             <p
                                                 class="u-form-group u-form-text u-label-top u-text u-text-custom-color-1 u-text-5">
                                                 روابط </p>
                                             <div
                                                 class="u-form-checkbox-group u-form-group u-form-input-layout-horizontal u-label-top u-form-group-9">
-                                                <label class="u-label u-label-7">Checks</label>
                                                 <div class="u-form-checkbox-group-wrapper">
                                                     <div class="u-input-row">
                                                         <input id="field-ff45" type="checkbox" name="checkbox-1[]"
@@ -331,61 +405,153 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="input-wrapper" id="inputs-container-2">
+                                                <!-- سيتم إضافة حقول الإدخال هنا -->
+                                                <div class="hidden-inputs">
+                                                    <div class="u-form-group u-label-top" id="hidden-field-linkedin"
+                                                        style="display: none;">
+                                                        <label for="input-linkedin"
+                                                            class="u-label u-label-5">LinkedIn</label>
+                                                        <input type="text" placeholder="LinkedIn" id="input-linkedin"
+                                                            name="input-linkedin" oninput="sendData()"
+                                                            class="u-border-none u-input u-input-rectangle">
+                                                    </div>
+                                                    <div class="u-form-group u-label-top" id="hidden-field-facebook"
+                                                    style="display: none;">
+                                                    <label for="input-facebook"
+                                                        class="u-label u-label-5">facebook</label>
+                                                    <input type="text" placeholder="facebook" id="input-facebook"
+                                                        name="input-facebook" oninput="sendData()"
+                                                        class="u-border-none u-input u-input-rectangle">
+                                                </div>
+                                                    <!-- أضف المزيد من الحقول هنا -->
+                                                </div>
+                                            </div>
                                         </form>
-
-
-
-
-
-
-
-
-
-
                                     </div>
                                 </div>
                             </div>
 
-
                             <script>
-                                function sendData() {
-                                    const name = document.getElementById('name-055b').value;
-                                    const job = document.getElementById('job-055b').value;
-                                    const email = document.getElementById('email-055b').value;
-                                    const phone = document.getElementById('phone-93c9').value;
-                        
-                                    const data = {
-                                        type: 'updateCV',
-                                        name: name,
-                                        job: job,
-                                        email: email,
-                                        phone: phone
-                                    };
-                        
-                                    const iframe = document.getElementById('cvIframe');
-                                    iframe.contentWindow.postMessage(data, '*');
-                        
-                                    // Save data to localStorage
-                                    localStorage.setItem('cvData', JSON.stringify(data));
-                                }
-                        
-                                function downloadCV() {
-                                    const iframe = document.getElementById('cvIframe');
-                                    iframe.contentWindow.postMessage({ type: 'downloadPDF' }, '*');
-                                }
-                        
-                                // Load data from localStorage
-                                document.addEventListener('DOMContentLoaded', (event) => {
-                                    const savedData = localStorage.getItem('cvData');
-                                    if (savedData) {
-                                        const { name, job, email, phone } = JSON.parse(savedData);
-                                        document.getElementById('name-055b').value = name;
-                                        document.getElementById('job-055b').value = job;
-                                        document.getElementById('email-055b').value = email;
-                                        document.getElementById('phone-93c9').value = phone;
-                                        sendData(); // Send data to iframe
-                                    }
+                            // معالجة تغيير تحديد الـ checkbox للمجموعة الأولى
+                            document.querySelectorAll('.u-form-group-7 .u-field-input[type="checkbox"]').forEach(
+                                function(checkbox) {
+                                    checkbox.addEventListener('change', function() {
+                                        var fieldId = 'hidden-field-' + checkbox.value.toLowerCase()
+                                            .replace(/\s+/g, '-');
+                                        var inputField = document.getElementById(fieldId);
+
+                                        if (checkbox.checked) {
+                                            if (inputField) {
+                                                inputField.style.display = 'block';
+                                            }
+                                        } else {
+                                            if (inputField) {
+                                                inputField.style.display = 'none';
+                                            }
+                                        }
+                                    });
                                 });
+
+                            // معالجة تغيير تحديد الـ checkbox للمجموعة الثانية
+                            document.querySelectorAll('.u-form-group-9 .u-field-input[type="checkbox"]').forEach(
+                                function(checkbox) {
+                                    checkbox.addEventListener('change', function() {
+                                        var fieldId = 'hidden-field-' + checkbox.value.toLowerCase()
+                                            .replace(/\s+/g, '-');
+                                        var inputField = document.getElementById(fieldId);
+
+                                        if (checkbox.checked) {
+                                            if (inputField) {
+                                                inputField.style.display = 'block';
+                                            }
+                                        } else {
+                                            if (inputField) {
+                                                inputField.style.display = 'none';
+                                            }
+                                        }
+                                    });
+                                });
+
+
+                            function sendData() {
+                                const name = document.getElementById('name-055b').value;
+                                const job = document.getElementById('job-055b').value;
+                                const email = document.getElementById('email-055b').value;
+                                const phone = document.getElementById('phone-93c9').value;
+                                const address = document.getElementById('address-909c').value;
+                                const date = document.getElementById('input-date').value;
+                                const nationality = document.getElementById('input-nationality').value;
+                                const identity = document.getElementById('input-identity').value;
+                                const caseman = document.getElementById('input-caseman').value;
+                                const militaryservice = document.getElementById('input-militaryservice').value;
+                                const drive = document.getElementById('input-drive').value;
+                                const gender = document.getElementById('input-gender').value;
+
+                                const data = {
+                                    type: 'updateCV',
+                                    name: name,
+                                    job: job,
+                                    email: email,
+                                    phone: phone,
+                                    address: address,
+                                    date: date,
+                                    nationality: nationality,
+                                    identity: identity,
+                                    caseman: caseman,
+                                    militaryservice: militaryservice,
+                                    drive: drive,
+                                    gender: gender
+                                };
+
+                                const iframe = document.getElementById('cvIframe');
+                                iframe.contentWindow.postMessage(data, '*');
+
+                                // Save data to localStorage
+                                localStorage.setItem('cvData', JSON.stringify(data));
+                            }
+
+                            function downloadCV() {
+                                const iframe = document.getElementById('cvIframe');
+                                iframe.contentWindow.postMessage({
+                                    type: 'downloadPDF'
+                                }, '*');
+                            }
+
+                            // Load data from localStorage
+                            document.addEventListener('DOMContentLoaded', (event) => {
+                                const savedData = localStorage.getItem('cvData');
+                                if (savedData) {
+                                    const {
+                                        name,
+                                        job,
+                                        email,
+                                        phone,
+                                        address,
+                                        date,
+                                        nationality,
+                                        identity,
+                                        caseman,
+                                        militaryservice,
+                                        drive,
+                                        gender
+                                    } = JSON.parse(savedData);
+                                    document.getElementById('name-055b').value = name;
+                                    document.getElementById('job-055b').value = job;
+                                    document.getElementById('email-055b').value = email;
+                                    document.getElementById('phone-93c9').value = phone;
+                                    document.getElementById('address-909c').value = address;
+                                    document.getElementById('input-date').value = date;
+                                    document.getElementById('input-nationality').value = nationality;
+                                    document.getElementById('input-identity').value = identity;
+                                    document.getElementById('input-caseman').value = caseman;
+                                    document.getElementById('input-militaryservice').value = militaryservice;
+                                    document.getElementById('input-drive').value = drive;
+                                    document.getElementById('input-gender').value = gender;
+                                    sendData(); // Send data to iframe
+                                }
+                            });
                             </script>
 
 
@@ -422,16 +588,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-1">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-2">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -493,16 +659,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-8">
                                         <div class="u-container-layout u-container-layout-10">
                                             <div class="rtl u-expanded-width u-form u-form-3">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -603,16 +769,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-2">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-4">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -673,16 +839,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-10">
                                         <div class="u-container-layout u-container-layout-12">
                                             <div class="rtl u-expanded-width u-form u-form-5">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -783,16 +949,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-3">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-6">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -854,16 +1020,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-12">
                                         <div class="u-container-layout u-container-layout-14">
                                             <div class="rtl u-expanded-width u-form u-form-7">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -933,16 +1099,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-4">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-8">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -1004,16 +1170,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-14">
                                         <div class="u-container-layout u-container-layout-16">
                                             <div class="rtl u-expanded-width u-form u-form-9">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -1083,16 +1249,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-5">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-10">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -1153,16 +1319,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-16">
                                         <div class="u-container-layout u-container-layout-18">
                                             <div class="rtl u-expanded-width u-form u-form-11">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -1213,16 +1379,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-6">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-12">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -1283,16 +1449,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-18">
                                         <div class="u-container-layout u-container-layout-20">
                                             <div class="rtl u-expanded-width u-form u-form-13">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -1343,16 +1509,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-7">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-14">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -1413,16 +1579,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-20">
                                         <div class="u-container-layout u-container-layout-22">
                                             <div class="rtl u-expanded-width u-form u-form-15">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -1498,16 +1664,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-8">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-16">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -1569,16 +1735,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-22">
                                         <div class="u-container-layout u-container-layout-24">
                                             <div class="rtl u-expanded-width u-form u-form-17">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -1678,16 +1844,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-9">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-18">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -1748,16 +1914,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-24">
                                         <div class="u-container-layout u-container-layout-26">
                                             <div class="rtl u-expanded-width u-form u-form-19">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -1823,16 +1989,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-10">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-20">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -1893,16 +2059,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-26">
                                         <div class="u-container-layout u-container-layout-28">
                                             <div class="rtl u-expanded-width u-form u-form-21">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -2001,16 +2167,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-11">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-22">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -2071,16 +2237,16 @@
                                         class="u-container-style u-expanded-width u-grey-5 u-group u-radius u-shape-round u-group-28">
                                         <div class="u-container-layout u-container-layout-30">
                                             <div class="rtl u-expanded-width u-form u-form-23">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
                                                     source="email" name="form-1" style="padding: 10px;">
@@ -2145,16 +2311,16 @@
                                                 class="u-align-right-xs u-border-1 u-border-grey-25 u-line u-line-horizontal u-line-12">
                                             </div>
                                             <div class="custom-expanded rtl u-form u-form-24">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+
+
+
+
+
+
+
+
+
+
                                                 <form action="#"
                                                     class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form"
                                                     source="email" name="form" style="padding: 10px;">
@@ -2593,14 +2759,14 @@
                                         </div>
                                     </div>
                                     <div
-                                    class="u-container-style u-hover-feature u-list-item u-repeater-item u-shape-round u-list-item-4">
-                                    <div
-                                        class="u-container-layout u-similar-container u-valign-middle u-container-layout-36">
-                                        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-26"
-                                            src="../../images/154843.png" alt="" data-image-width="128"
-                                            data-image-height="128">
+                                        class="u-container-style u-hover-feature u-list-item u-repeater-item u-shape-round u-list-item-4">
+                                        <div
+                                            class="u-container-layout u-similar-container u-valign-middle u-container-layout-36">
+                                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-26"
+                                                src="../../images/154843.png" alt="" data-image-width="128"
+                                                data-image-height="128">
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
